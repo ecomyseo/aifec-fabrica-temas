@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "libreria-lectora",
+    "nombre": "Librería Lectora",
+    "sector": "librería independiente con venta de libros nuevos y de segunda mano",
+    "publico": "lectores habituales que buscan por título, autor o colección y compran varios libros a la vez",
+    "idea": "el libro manda: la portada se ve como un lomo en una estantería y el autor y la colección son tan importantes como el precio",
+    "referencias": ["https://ejemplo.test/libreria", "https://ejemplo.test/libreria/ficha-de-libro"],
+    "paleta": {"fondo": "#f6f1e7", "texto": "#2a2118", "acento": "#8c2f1b", "banda": "#2a2118"},
+    "tipografia": "serif del sistema para títulos y sans del sistema para el cuerpo",
+    "superficies": {
+      "cabecera": "logotipo a la izquierda, buscador por título o autor muy ancho en el centro y carrito a la derecha; debajo, una fila de géneros",
+      "tarjeta": "portada vertical 2:3 sin marco, autor bajo el título, precio y formato (tapa blanda, tapa dura) en una línea",
+      "listado": "filtros por género, autor y formato como fila de desplegables sobre la rejilla; rejilla de cinco columnas",
+      "ficha": "portada grande a la izquierda; a la derecha título, autor, formato como botones y la sinopsis; debajo los datos de edición en una tabla",
+      "pie": "tres bandas: la tienda y su dirección, los enlaces de ayuda en una fila y la franja legal"
+    },
+    "no_hacer": ["fuentes de otro dominio", "carruseles automáticos", "imágenes de libros con derechos de autor"]
+  },
+  {
+    "slug": "floristeria-petalo",
+    "nombre": "Floristería Pétalo",
+    "sector": "floristería con reparto el mismo día en la ciudad",
+    "publico": "personas que compran un ramo para regalar y necesitan elegir el día y la franja de entrega",
+    "idea": "el regalo manda: la fecha de entrega y el mensaje de la tarjeta se eligen antes que el ramo, y el precio con el envío incluido se ve siempre",
+    "referencias": ["https://ejemplo.test/floristeria"],
+    "paleta": {"fondo": "#fdf7f4", "texto": "#2b2230", "acento": "#a3365f", "banda": "#3f2b4a"},
+    "tipografia": "serif redondeada del sistema para títulos y sans legible para el cuerpo",
+    "superficies": {
+      "cabecera": "franja fina con el plazo de entrega de hoy; logotipo centrado y, a los lados, buscador y carrito como iconos; menú de ocasiones debajo",
+      "tarjeta": "foto cuadrada con esquinas muy redondeadas, ocasión como etiqueta, precio con envío incluido y botón redondo para añadir",
+      "listado": "ocasiones como píldoras en fila desplazable; filtros en un panel que se abre desde un botón; rejilla de tres tarjetas grandes",
+      "ficha": "foto grande a la izquierda con miniaturas debajo; a la derecha tamaños del ramo como tarjetas elegibles, fecha de entrega, mensaje y compra",
+      "pie": "una banda de presentación con el teléfono de pedidos, una de menús y la franja legal"
+    },
+    "no_hacer": ["fuentes de otro dominio", "ventanas emergentes de suscripción", "fotografías de terceros"]
+  },
+  {
+    "slug": "bicicletas-rueda",
+    "nombre": "Bicicletas Rueda",
+    "sector": "tienda de bicicletas y accesorios con taller propio",
+    "publico": "ciclistas urbanos y de carretera que comparan modelos por talla, peso y componentes",
+    "idea": "la ficha técnica manda: la talla y el grupo de componentes se eligen en la propia tarjeta y la ficha empieza por una tabla comparable de características",
+    "referencias": ["https://ejemplo.test/bicicletas", "https://ejemplo.test/bicicletas/guia-de-tallas"],
+    "paleta": {"fondo": "#f2f4f5", "texto": "#14212b", "acento": "#0b6e4f", "banda": "#14212b"},
+    "tipografia": "sans condensada del sistema para títulos y sans neutra para el cuerpo",
+    "superficies": {
+      "cabecera": "dos filas: arriba logotipo, buscador y carrito con su importe; abajo, barra oscura con tipos de bicicleta y un acceso destacado a la cita de taller",
+      "tarjeta": "foto apaisada 4:3, tallas disponibles como casillas pequeñas, tres datos clave (peso, grupo, material) y precio con el anterior tachado",
+      "listado": "barra lateral de filtros técnicos con facetas plegables y contador; arriba, orden y conmutador de rejilla o lista",
+      "ficha": "galería a la izquierda; a la derecha precio, talla y compra; a todo el ancho, la tabla de características antes que la descripción",
+      "pie": "enlaces de taller y garantía en columnas, medios de pago y la franja legal"
+    },
+    "no_hacer": ["fuentes de otro dominio", "vídeos que se reproducen solos", "logotipos de marcas reales"]
+  }
+]

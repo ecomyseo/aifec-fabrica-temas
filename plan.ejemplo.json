@@ -1,0 +1,15 @@
+{
+  "activo": true,
+  "aifec": "../aifec",
+  "php": "php",
+  "php_versiones": ["php7.4", "php8.4"],
+  "horario": {"inicio": "10:00", "fin": "23:30"},
+  "por_dia": 3,
+  "intentos": 3,
+  "atascados_seguidos_que_paran": 2,
+  "motor": {"tipo": "manual"},
+  "gasto": {"tope_eur": 0, "por_sesion_eur": 0},
+  "umbral_estructura": 0.82,
+  "capturas": {"activas": false},
+  "aviso": {"orden": []}
+}

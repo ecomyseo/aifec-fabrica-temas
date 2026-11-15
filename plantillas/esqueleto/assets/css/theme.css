@@ -1,0 +1,77 @@
+/*
+ * __Nombre__ — hoja de estilos del tema hijo de base (__slug__).
+ * Va después de la del tema base: solo escribe lo que cambia. Todo color sale de variables.
+ *
+ * @author    Ecom Experts <ecomyseo@gmail.com>
+ * @copyright 2026 Ecom Experts
+ * @license   Ver LICENSE.md
+ */
+
+/* ---- Cabecera de tres pisos ---- */
+.sk-header-top{background:var(--sk-band);color:var(--sk-band-ink);font-size:.8125rem}
+.sk-header-links{display:flex;justify-content:flex-end;gap:1.25rem;margin:0;padding:0;list-style:none}
+.sk-header-links a{display:inline-flex;align-items:center;min-height:32px;color:inherit}
+.sk-header-hook:empty{display:none}
+.sk-header-main{display:flex;align-items:center;gap:1rem;min-height:var(--header-h)}
+.sk-search{display:flex;flex:1 1 auto;gap:.5rem;max-width:44rem;margin-inline:auto}
+.sk-search .af-input{flex:1 1 auto}
+.sk-cart{margin-left:auto}
+.sk-header-nav{border-top:1px solid var(--line);background:var(--surface-2)}
+.sk-header-nav .af-nav-list{justify-content:center}
+
+/* ---- Tarjeta: figura, y debajo el pie con el nombre que enlaza toda la tarjeta ---- */
+.sk-card{display:flex;flex-direction:column;position:relative;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.sk-card-figure{position:relative;aspect-ratio:1/1;margin:0;background:var(--surface-2)}
+.sk-card-figure img{position:absolute;inset:.75rem;width:calc(100% - 1.5rem);height:calc(100% - 1.5rem);object-fit:contain}
+.sk-card.is-out .sk-card-img{opacity:.55}
+.sk-card .af-badges{position:absolute;top:.5rem;left:.5rem;display:flex;gap:.3rem;margin:0;padding:0;list-style:none}
+.sk-card-foot{display:flex;flex:1;flex-direction:column;gap:.3rem;padding:.8rem .9rem 1rem}
+.sk-card-brand{margin:0;color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.sk-card-name{margin:0;font:600 .95rem/1.3 var(--font)}
+.sk-card-link{color:inherit;text-decoration:none}
+.sk-card-link::after{content:"";position:absolute;inset:0}
+.sk-card-rating{display:flex;align-items:center;gap:.35rem;margin:0}
+.sk-card .af-price{margin-top:auto}
+.sk-card:hover,.sk-card:focus-within{border-color:var(--field);box-shadow:var(--shadow)}
+.sk-grid{margin:0;padding:0;list-style:none}
+
+/* ---- Listado: el panel de filtros a la derecha en escritorio ---- */
+.sk-listing-head{margin-bottom:1rem}
+.sk-listing-children{display:flex;flex-wrap:wrap;gap:.5rem 1rem;margin:0;padding:0;list-style:none}
+.sk-listing-children a{display:inline-flex;align-items:center;min-height:44px}
+.sk-listing-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--line)}
+.sk-listing-bar p{margin:0}
+@media (min-width:900px){
+  .sk-listing{grid-template-columns:minmax(0,1fr) 16rem}
+  .sk-listing>.af-listing-results:first-child{grid-column:auto}
+}
+
+/* ---- Ficha: la cabecera ocupa las dos columnas ---- */
+.sk-product-head{grid-column:1/-1}
+.sk-product-head .af-title{margin-bottom:.25rem}
+.sk-product-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1rem;margin:0;padding:0;list-style:none}
+.sk-product-offer{display:grid;gap:.5rem;padding:1rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.sk-product-form{margin-top:1rem}
+.af-buy-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.75rem}
+.sk-product-summary{margin-top:1rem}
+.sk-product .af-facts{display:grid;gap:.4rem;margin:1rem 0 0;padding:0;list-style:none}
+.sk-product-sections{display:grid;gap:2rem;margin-top:2rem}
+@media (min-width:900px){
+  .sk-product{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1rem 2.5rem;align-items:start}
+}
+
+/* ---- Pie en tres bandas ---- */
+.sk-footer{padding:0;background:var(--surface)}
+.sk-footer-intro{padding:2rem 0;background:var(--sk-band);color:var(--sk-band-ink)}
+.sk-footer-name{margin:0 0 .5rem;font:700 1.4rem/1.2 var(--font-head)}
+.sk-footer-contact{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;font-style:normal}
+.sk-footer-contact a{color:inherit}
+.sk-footer-sections{padding:1.5rem 0}
+.sk-footer-sections .af-container{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}
+.sk-footer-heading{margin:0 0 .5rem;font-size:1rem}
+.sk-footer .af-nav-list{flex-direction:column;gap:0}
+.sk-footer .af-nav-link{min-height:44px;padding:.3rem 0;font-weight:400}
+.sk-footer-legal{padding:.75rem 0;border-top:1px solid var(--line)}
+.sk-footer-legal .af-container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem}
+.sk-footer-legal .af-nav-list{flex-direction:row;flex-wrap:wrap;gap:.25rem 1rem}
+.sk-footer-legal .af-nav-link{font-size:.875rem;color:var(--muted)}

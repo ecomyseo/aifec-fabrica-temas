@@ -1,0 +1,16 @@
+{
+    "name": "__Nombre__",
+    "version": "1.0.0",
+    "description": "Child theme of base with its own five surfaces: three-tier header, figure-style product card, listing with the filter panel on the right, product page with a head over the two columns and a three-band footer.",
+    "parent": "base",
+    "settings": {
+        "colors": {"label": "Colours", "fields": {
+            "band": {"type": "color", "label": "Bands (top strip and footer)", "default": "#1f2421", "var": "--sk-band"},
+            "band_ink": {"type": "color", "label": "Text on the bands", "default": "#ffffff", "var": "--sk-band-ink"}
+        }},
+        "structure": {"label": "Structure", "fields": {
+            "header_top": {"type": "toggle", "label": "Show the top strip of the header", "default": 1},
+            "listing_cols": {"type": "select", "label": "Product list columns", "options": {"3": "Three", "4": "Four"}, "default": "3"}
+        }}
+    }
+}
