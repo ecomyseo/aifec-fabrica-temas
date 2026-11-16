@@ -30,7 +30,7 @@ LA_FABRICA = [p for p in TODOS if p.is_file()]
 
 class PruebasHigieneDeLasPuertas(unittest.TestCase):
     def test_hay_las_siete_puertas_y_sus_apoyos(self):
-        for nombre in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "capturas"):
+        for nombre in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato", "capturas"):
             self.assertTrue((PUERTAS / (nombre + ".py")).is_file(), nombre)
         for apoyo in ("_comun.py", "_html.py", "_css.py", "_pintar.php", "_sembrar.php"):
             self.assertTrue((PUERTAS / apoyo).is_file(), apoyo)

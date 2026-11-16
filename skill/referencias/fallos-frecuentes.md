@@ -50,6 +50,15 @@ Un script de shell que escribe un PHP se come las barras invertidas y los `$`, y
 
 Un tema no incluye capturas, zips, mapas de código ni `node_modules`: la puerta de limpieza los rechaza. Solo `preview.png` (1200 × 900) o `mockup.png` en la raíz; lo demás, imágenes dentro de `assets/`.
 
+## Lo que `theme:check` no ve y las pruebas del sistema sí (puerta «contrato»)
+
+Los tres primeros temas fabricados (`cafe`, `metrica` y `lookbook`) pasaban `theme:check` y rompieron la batería de AIFEC al instalarse, por dos cosas:
+
+- **Una imagen escrita sin `width` y `height`**, aunque sea dentro de una cadena de PHP que solo comprueba si el logotipo es una imagen. La prueba lee el texto de la plantilla, no lo que pinta: cualquier `<img …>` literal cuenta. La comprobación se lleva a una función de `functions.php` y la plantilla no escribe la etiqueta.
+- **Estrechar el texto con `max-width` en `.af-prose`, `.af-post` o `.af-page`.** En AIFEC el texto de entradas, páginas y fichas ocupa el ancho de su contenedor. Si quieres una columna de lectura, el límite va en el contenedor (la sección, la rejilla), y la hoja lleva tal cual `.af-prose{max-width:none;…}` y `.af-post>*,.af-page>*{max-width:none}`.
+
+Se ve antes de las puertas con `python puertas/contrato.py` (los argumentos, como cualquier puerta) o, más cómodo, con `python fabrica.py puertas <slug> --solo contrato`.
+
 ## Al seguir el skill con un encargo de ejemplo
 
 Se construyó «Floristería Pétalo» (`salida/floristeria-petalo/`) siguiendo este skill al pie de la letra. Lo que salió mal, y lo que se cambió:

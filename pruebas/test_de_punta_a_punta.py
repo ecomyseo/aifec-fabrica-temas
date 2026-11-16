@@ -62,9 +62,9 @@ class PruebaDePuntaAPunta(unittest.TestCase):
     def test_el_informe_trae_las_siete_puertas_seis_pasan_y_capturas_no_aplica(self):
         informe = json.loads((self.fab.raiz / "estado" / "encargos" / (SLUG + ".puertas.json")).read_text(encoding="utf-8"))
         estados = {p["nombre"]: p["estado"] for p in informe["puertas"]}
-        self.assertEqual(sorted(estados), sorted(["validador", "estructura", "peso", "movil", "traducciones", "limpieza", "capturas"]))
+        self.assertEqual(sorted(estados), sorted(["validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato", "capturas"]))
         self.assertEqual(estados["capturas"], "no_aplica")
-        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza"):
+        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato"):
             self.assertEqual(estados[puerta], "pasa", "%s: %s" % (puerta, informe["puertas"]))
         self.assertTrue(informe["pasa"])
 

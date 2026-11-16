@@ -177,7 +177,7 @@ class PruebasConElSistemaReal(unittest.TestCase):
 
     def test_el_esqueleto_pasa_las_siete_puertas(self):
         tema = self.tema("esq-bueno")
-        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza"):
+        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato"):
             with self.subTest(puerta=puerta):
                 informe = self.bien(puerta, tema, self.php_versiones())
                 self.assertTrue(informe["resumen"])
@@ -245,7 +245,7 @@ class PruebasConElSistemaReal(unittest.TestCase):
     def test_las_puertas_no_modifican_el_candidato(self):
         tema = self.tema("esq-intacto")
         antes = ap.arbol(tema)
-        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza"):
+        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato"):
             self.lanzar(puerta, tema, self.php_versiones())
         self.assertEqual(antes, ap.arbol(tema))
 

@@ -1,6 +1,6 @@
 ---
 name: fabrica-temas-aifec
-description: "Cómo construir un tema de AIFEC (el sistema de comercio electrónico en PHP) que pase las siete puertas de la fábrica de temas a la primera: leer el encargo, descomponer las cinco superficies, partir del esqueleto, escribir cabecera, tarjeta, listado, ficha y pie con composición propia, opciones, traducción, y pasar `python fabrica.py puertas <slug>`. Usar siempre que se vaya a crear o a rehacer un tema dentro de `salida/<slug>/`."
+description: "Cómo construir un tema de AIFEC (el sistema de comercio electrónico en PHP) que pase las ocho puertas de la fábrica de temas a la primera: leer el encargo, descomponer las cinco superficies, partir del esqueleto, escribir cabecera, tarjeta, listado, ficha y pie con composición propia, opciones, traducción, y pasar `python fabrica.py puertas <slug>`. Usar siempre que se vaya a crear o a rehacer un tema dentro de `salida/<slug>/`."
 ---
 
 # Construir un tema de AIFEC que pase las puertas
@@ -92,6 +92,7 @@ Lo que se dice: el tema está en `salida/<slug>/`, la última línea de las puer
 | `movil` | contrato de móvil, en lo pintado y en la hoja | cabecera pegajosa, barra fija con accesos reales, `safe-area`, 44 px, `:focus-visible` |
 | `traducciones` | `php aifec i18n:check themes/<slug>` | `0 missing` |
 | `limpieza` | nada de fuera ni de sobra | ninguna dirección de otro dominio ni `@import`; ningún `.zip`, `.map`, `node_modules`, captura suelta ni tipografía que no sea woff2; PHP válido en todas las versiones del plan |
+| `contrato` | las pruebas de temas del propio AIFEC (`tests/Themes/`) siguen pasando con tu tema dentro | toda imagen de plantilla con `width` y `height`, también las que montas dentro de una cadena de PHP; si tu hoja nombra `.af-prose{`, lleva `.af-prose{max-width:none;` y `.af-post>*,.af-page>*{max-width:none}` y ninguna regla estrecha `.af-prose`, `.af-post` ni `.af-page`; hoja sin `url()` relativas ni `@import` |
 | `capturas` | (opcional) cero errores de JavaScript, cero 5xx, cero desborde a 390 px | solo si el plan la activa |
 
 ## Lo prohibido

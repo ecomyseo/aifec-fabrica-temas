@@ -130,7 +130,7 @@ class PruebasSkill(unittest.TestCase):
         self.assertEqual(posiciones, sorted(posiciones))
 
     def test_nombra_las_siete_puertas_con_su_medida(self):
-        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "capturas"):
+        for puerta in ("validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato", "capturas"):
             self.assertRegex(self.texto, r"\| `%s` \|" % puerta, puerta)
         for medida in ("0,82", "0,90", "45 000", "25 000", "150 000", "safe-area", "44 px"):
             self.assertIn(medida, self.texto, medida)

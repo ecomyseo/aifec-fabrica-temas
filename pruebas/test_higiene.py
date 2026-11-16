@@ -85,7 +85,7 @@ class PruebasHigiene(unittest.TestCase):
         self.assertEqual(config["manifiesto"], "theme.json")
         self.assertEqual(config["orden_esqueleto"], ["theme:create", "{slug}", "--parent=base", "--name={nombre}"])
         self.assertEqual(config["puertas"], ["validador", "estructura", "peso", "movil", "traducciones",
-                                              "limpieza", "capturas"])
+                                              "limpieza", "contrato", "capturas"])
 
     def test_los_ejemplos_son_json_validos_y_el_plan_de_ejemplo_no_lleva_rutas_de_esta_maquina(self):
         for nombre in ("plan.ejemplo.json", "cola.ejemplo.json", "fabrica.json"):

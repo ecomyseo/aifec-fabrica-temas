@@ -4,5 +4,5 @@
   "carpeta_destino": "themes",
   "manifiesto": "theme.json",
   "orden_esqueleto": ["theme:create", "{slug}", "--parent=base", "--name={nombre}"],
-  "puertas": ["validador", "estructura", "peso", "movil", "traducciones", "limpieza", "capturas"]
+  "puertas": ["validador", "estructura", "peso", "movil", "traducciones", "limpieza", "contrato", "capturas"]
 }

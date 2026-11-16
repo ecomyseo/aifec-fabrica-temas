@@ -41,7 +41,7 @@ Las puertas `estructura`, `peso` y `movil` miran HTML **servido de verdad**, no 
 
 Todas las rutas que se pasan a PHP van **absolutas**: el sitio guarda en su caché las rutas con las que arrancó y una relativa deja el banco roto para las siguientes.
 
-## Las siete
+## Las ocho
 
 ### `validador` — el contrato de temas del sistema
 
@@ -91,6 +91,20 @@ Instala el candidato y lanza `php aifec i18n:check themes/<slug> es`. Pasa con c
 1. **Direcciones ajenas**: ninguna `http(s)://` (salvo el espacio de nombres de SVG, `www.w3.org`), ninguna dirección sin protocolo (`//host.tld`) y ningún `@import` en plantillas y recursos de texto de `assets/`.
 2. **Ficheros de sobra**: paquetes comprimidos, mapas de código, ficheros de trabajo, tipografías `.ttf`/`.otf`/`.eot` (solo woff2), carpetas `node_modules`, `.git`, `capturas`…, e imágenes fuera de `assets/` (solo `preview.png` y `mockup.png` en la raíz).
 3. **Sintaxis de PHP** con `php -l` en cada ejecutable de `php_versiones` del plan y en el de `php`. Uno que no se encuentra **no pasa**: sin él no se prueba esa versión.
+
+### `contrato` — las pruebas de temas del propio sistema
+
+Instala el candidato en el banco y lanza, con el lanzador del sistema (`php tests/run.php …`), las pruebas de `tests/Themes/` que AIFEC pasa a **todos** los temas a la vez:
+
+| Prueba | Lo que exige a un tema |
+|---|---|
+| `AriaTest.php` | entre otras cosas, ninguna plantilla escribe un `<img>` o un `<iframe>` sin `width` y `height`, tampoco dentro de una cadena de PHP |
+| `ReadingColumnTest.php` | si la hoja nombra `.af-prose{`, el texto de entradas, páginas y fichas va a todo el ancho: lleva `.af-prose{max-width:none;` y `.af-post>*,.af-page>*{max-width:none}`, y ninguna regla de `.af-prose`, `.af-post` o `.af-page` pone un `max-width` con medida |
+| `InlineCssTest.php` | la hoja cabe dentro de la página: sin `url()` relativas, sin `@import` y por debajo del tope |
+
+**No repite ninguna comprobación**: lee la línea final `PRUEBAS: n OK, m FALLAN` y cada `FALLA …`. Pasa con código 0 y cero fallos. Cuando un fallo no nombra a este tema (`themes/<slug>/` o `<slug>: …`), lo dice: otro tema del banco tiene las pruebas rotas y tapa el resultado de este, y hay que rehacer el banco (`python fabrica.py banco --rehacer`). Si el sistema no trae el lanzador o ninguna de las tres pruebas, sale con 2.
+
+Existe porque los tres primeros temas fabricados pasaban `theme:check` y rompían la batería de AIFEC el día que se instalaron.
 
 ### `capturas` — lo que solo se ve en un navegador (opcional)
 
