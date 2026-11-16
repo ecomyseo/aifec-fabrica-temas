@@ -102,7 +102,7 @@ Lo que se dice: el tema está en `salida/<slug>/`, la última línea de las puer
 - **Quitar huecos o datos** de una plantilla de módulo para simplificarla.
 - **Enlazar fuentes, scripts, imágenes o hojas de otro dominio**, ni `@import`, ni bibliotecas, ni iconos como fuente (los iconos, SVG en línea).
 - **Tocar el sistema** (`core/`, `modules/`, otros temas) o el banco, o escribir fuera de `salida/<slug>/`.
-- Datos de ejemplo con pinta de reales: correos, teléfonos, direcciones o marcas de verdad. Todo inventado y con pinta de inventado (`tienda.test`, `600000001`).
+- Datos de ejemplo con pinta de reales: correos, teléfonos, direcciones o marcas de verdad. Todo inventado y con pinta de inventado (`tienda.test`), y **sin teléfonos**: un número «de relleno» con forma de móvil es el de alguien.
 - Dar por bueno lo que no se ha comprobado. Si una puerta no aplica, se dice.
 
 ## Referencias
