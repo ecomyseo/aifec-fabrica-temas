@@ -160,9 +160,9 @@ def php_con_sqlite():
     """Un PHP que sirva para el banco real (con `pdo_sqlite`): `AIFEC_PHP`, el del PATH o los de una instalación de
     herramientas conocida. None si no se encuentra ninguno."""
     candidatos = [os.environ.get("AIFEC_PHP", ""), shutil.which("php") or ""]
-    for raiz in ("C:/dev-tools/php",):
-        carpeta = Path(raiz)
-        if carpeta.is_dir():
+    for raiz in (os.environ.get("AIFEC_PHP_DIR", ""),):
+        carpeta = Path(raiz) if raiz else None
+        if carpeta is not None and carpeta.is_dir():
             candidatos += [str(p / "php.exe") for p in sorted(carpeta.glob("php-8.*"), reverse=True)]
     for candidato in candidatos:
         if not candidato or not Path(candidato).exists():
